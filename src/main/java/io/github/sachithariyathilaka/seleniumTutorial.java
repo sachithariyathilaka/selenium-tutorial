@@ -1,4 +1,4 @@
-package com.selenium;
+package io.github.sachithariyathilaka;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -8,7 +8,14 @@ import org.testng.annotations.Test;
 
 import java.time.Duration;
 
-public class App {
+/**
+ * Main class for the selenium tutorial application.
+ *
+ * @author  Sachith Ariyathilaka
+ * @version 1.0.0
+ * @since   2024/04/07
+ */
+public class seleniumTutorial {
 
     @Test
     public void MainTest() {

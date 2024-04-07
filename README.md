@@ -1,10 +1,18 @@
 # selenium-tutorial
 Java maven project for Selenium test automation.
 
-# Technology
-Java, Maven, Selenium
+* ### Technologies
+  * Java 17
+  * Maven
+  * Selenium 4.11.0
 
-# Configuration
-Medium Blog: https://sachithariyathilaka.medium.com/selenium-ee1292be0022
+* ### Configuration
+  * https://towardsdev.com/selenium-ee1292be0022
 
-Angular UI Application Repository: https://github.com/sachithariyathilaka/selenium-ui
+* ### Release Note
+
+    * Release: 1.0.0
+    * Date: 2024/04/07
+    * Module: Selenium Tutorial
+    * Changes
+        * Implements the selenium java application.

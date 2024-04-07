@@ -2,37 +2,149 @@
   xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
 
-  <groupId>com.selenium</groupId>
-  <artifactId>tutorial</artifactId>
-  <version>1.0-SNAPSHOT</version>
+  <!-- Core information -->
+  <groupId>io.github.sachithariyathilaka</groupId>
+  <artifactId>selenium-tutorial</artifactId>
+  <version>1.0.0</version>
+
+  <!-- Packaging information -->
   <packaging>jar</packaging>
 
-  <name>tutorial</name>
-  <url>http://maven.apache.org</url>
+  <!-- Project information -->
+  <name>Selenium Tutorial</name>
+  <description>Java maven tutorial project for test selenium</description>
+  <url>https://github.com/sachithariyathilaka/selenium-tutorial</url>
+  <inceptionYear>2024</inceptionYear>
 
+  <!-- License information -->
+  <licenses>
+    <license>
+      <name>MIT Licence</name>
+    </license>
+  </licenses>
+
+  <!-- Organization information -->
+  <organization>
+    <name>ByteGen Technologies</name>
+    <url>https://github.com/sachithariyathilaka</url>
+  </organization>
+
+  <!-- Developer information -->
+  <developers>
+    <developer>
+      <id>1</id>
+      <name>Sachith Ariyathilaka</name>
+      <organization>ByteGen Technologies</organization>
+      <organizationUrl>https://github.com/sachithariyathilaka</organizationUrl>
+      <email>sachith.vidu@yahoo.com</email>
+      <roles>
+        <role>Chairman</role>
+      </roles>
+      <timezone>UTC +5:30</timezone>
+    </developer>
+  </developers>
+
+  <!-- Property information -->
   <properties>
+
+    <!-- Project properties -->
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    <java.version>17</java.version>
+
+    <!-- Dependency properties -->
+    <selenium.version>4.11.0</selenium.version>
+    <testing.version>7.8.0</testing.version>
+    <java.client.version>8.5.1</java.client.version>
+
   </properties>
 
+  <!-- Dependency information -->
   <dependencies>
 
+    <!-- Selenium dependencies -->
     <dependency>
       <groupId>org.seleniumhq.selenium</groupId>
       <artifactId>selenium-java</artifactId>
-      <version>4.11.0</version>
+      <version>${selenium.version}</version>
     </dependency>
 
     <dependency>
       <groupId>org.testng</groupId>
       <artifactId>testng</artifactId>
-      <version>7.8.0</version>
+      <version>${testing.version}</version>
     </dependency>
 
     <dependency>
       <groupId>io.appium</groupId>
       <artifactId>java-client</artifactId>
-      <version>8.5.1</version>
+      <version>${java.client.version}</version>
     </dependency>
 
   </dependencies>
+
+  <!-- Repository information -->
+  <repositories>
+    <repository>
+      <id>central</id>
+      <name>Central Repository</name>
+      <url>https://repo.maven.apache.org/maven2</url>
+      <layout>default</layout>
+      <snapshots>
+        <enabled>false</enabled>
+      </snapshots>
+    </repository>
+  </repositories>
+
+  <!-- Plugin repository information -->
+  <pluginRepositories>
+    <pluginRepository>
+      <id>central</id>
+      <name>Central Repository</name>
+      <url>https://repo.maven.apache.org/maven2</url>
+      <layout>default</layout>
+      <snapshots>
+        <enabled>false</enabled>
+      </snapshots>
+      <releases>
+        <updatePolicy>never</updatePolicy>
+      </releases>
+    </pluginRepository>
+  </pluginRepositories>
+
+  <!-- Build information -->
+  <build>
+
+    <!-- General information -->
+    <directory>${project.basedir}/target</directory>
+    <outputDirectory>${project.build.directory}/classes</outputDirectory>
+    <sourceDirectory>${project.basedir}/src/main/java</sourceDirectory>
+    <finalName>${project.artifactId}-${project.version}</finalName>
+
+    <!-- Plugin information -->
+    <plugins>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-compiler-plugin</artifactId>
+        <configuration>
+          <source>${java.version}</source>
+          <target>${java.version}</target>
+        </configuration>
+      </plugin>
+    </plugins>
+
+  </build>
+
+  <!-- SCM information -->
+  <scm>
+    <url>https://github.com/sachithariyathilaka/selenium-tutorial</url>
+    <connection>scm:git:https://github.com/sachithariyathilaka/selenium-tutorial.git</connection>
+    <developerConnection>scm:git:git@github.com:sachithariyathilaka/selenium-tutorial.git
+    </developerConnection>
+  </scm>
+
+  <!-- Reporting information -->
+  <reporting>
+    <outputDirectory>${project.build.directory}/site</outputDirectory>
+  </reporting>
+
 </project>
