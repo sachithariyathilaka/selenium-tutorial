@@ -1,4 +1,4 @@
-# selenium-tutorial
+# Selenium Tutorial
 Java maven project for Selenium test automation.
 
 * ### Technologies
